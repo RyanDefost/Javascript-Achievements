@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Dungeon Master</title>
+    </head>
+    <body>
+    </body>
+        <button>
+            <p id="button">Click me to roll</p>
+        </button>
+
+        <p>First rolls:</p> <p id="lijst">- <br></p>
+
+        <p>sorted rolls:</p> <p id="lijst2">- <br></p>
+
+        <p>addedRoll:</p> <p id="lijst3">- <br></p>
+
+    <script>
+        // My logic goes here
+        let knop = document.getElementById("button")
+        knop.addEventListener("click", rollingForStat);
+
+        function rollingForStat(){
+            let arrayprint = document.getElementById("lijst").innerHTML
+
+            roll1 = Math.floor(Math.random() * 7 +1);
+            roll2 = Math.floor(Math.random() * 7 +1);
+            roll3 = Math.floor(Math.random() * 7 +1);
+            roll4 = Math.floor(Math.random() * 7 +1);
+
+
+
+            let array = [roll1, roll2, roll3, roll4]
+            array.sort();
+            lijst.innerHTML = array
+
+            let newArray = array.slice(1, 4);
+            lijst2.innerHTML = newArray
+
+            let Num1 = newArray.slice(0,1);
+            let Num2 = newArray.slice(1,2);
+            let Num3 = newArray.slice(2,3);
+            let addedRoll = Number(Num1) + Number(Num2) + Number(Num3)
+
+            lijst3.innerHTML = addedRoll    
+        }
+    </script>
+</html>
