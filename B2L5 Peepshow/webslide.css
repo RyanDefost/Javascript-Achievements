@@ -1,0 +1,6 @@
+.image{
+    background-image: URL('Afbeeldingen/Curtains.png');
+    background-repeat: no-repeat;
+    width: auto;
+    height: 200px;
+}
